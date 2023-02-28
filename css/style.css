@@ -1,0 +1,628 @@
+@charset "UTF-8";
+/* 共通 */
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  line-height: 1.5;
+}
+
+a:hover {
+  color: #D9D9D9;
+}
+
+.button {
+  width: 160px;
+  display: block;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  padding: 12px 24px;
+  border-radius: 100vh;
+  background-color: #000;
+  box-shadow: #D9D9D9 0 4px 0;
+}
+.button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+img {
+  width: 100%;
+}
+
+.section-box {
+  margin: 160px auto;
+}
+
+.section-title {
+  width: 90%;
+  margin-left: auto;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: #f90;
+  padding: 8px 40px;
+  margin-bottom: 80px;
+}
+
+.section-contents {
+  display: flex;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 160px;
+}
+
+.contents-box {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.contents-text {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* header */
+.header {
+  background-color: #f90;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: background-color 0.5s;
+}
+
+.header.header-change {
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+.header-logo img {
+  height: 40px;
+}
+
+/* navi */
+.grobal-navi {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navi-list {
+  display: flex;
+}
+
+.navi-item {
+  margin-left: 40px;
+}
+
+/* main */
+.main-visual {
+  font-size: 88px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/main\ visual.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.concept-title {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+}
+
+.about {
+  justify-content: space-between;
+  margin-left: 2rem;
+}
+.about .text-title {
+  text-align: start;
+}
+
+.tuning, .trade {
+  margin-left: 2rem;
+}
+
+.maintenance {
+  margin-right: 2rem;
+}
+
+/* 下層ページ About */
+.about-visual {
+  font-size: 104px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  height: 50vh;
+  margin-top: 80px;
+  background-image: url(/img/hv-about.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.about-box {
+  margin: 80px auto;
+  width: 75%;
+}
+.about-box .text-title {
+  text-align: start;
+  font-size: 40px;
+}
+.about-box p {
+  font-size: 1.2rem;
+}
+
+.page-about {
+  display: block;
+}
+
+.page-about_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.page-about_title h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.page-about_text {
+  width: 96%;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.flow {
+  display: block;
+}
+
+.flow-box {
+  background-color: #f90;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.flow-box_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.process {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.process-block {
+  background-color: #fff;
+  width: 160px;
+  height: 240px;
+  transform: skewX(15deg);
+}
+
+.process-item {
+  position: relative;
+}
+.process-item p {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Works */
+.works {
+  display: block;
+}
+.works img {
+  width: 100%;
+}
+
+.works-text {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.works-text p {
+  margin-bottom: 80px;
+}
+
+.works-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* 下層ページ Works */
+.works-visual {
+  font-size: 104px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  height: 50vh;
+  margin-top: 80px;
+  background-image: url(/img/hv-works.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.page-works {
+  margin-bottom: 80px;
+}
+.page-works img {
+  width: 100%;
+}
+
+/* Used Cars */
+.used-cars {
+  display: block;
+  width: 85%;
+  margin: 0 0 0 auto;
+}
+
+.cars-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin-bottom: 80px;
+}
+
+.cars-list_item {
+  margin: 0 auto;
+}
+.cars-list_item img {
+  width: 30vw;
+  padding: 0 32px 0 0;
+}
+
+.car-name {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* 下層ページ Used Cars */
+.usedcars-visual {
+  font-size: 104px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  height: 50vh;
+  margin-top: 80px;
+  background-image: url(/img/hv-usedcars.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.page-usedcars {
+  margin-bottom: 0;
+}
+
+.page-usedcars_list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.page-usedcars_item {
+  margin-bottom: 80px;
+}
+.page-usedcars_item img {
+  width: 32vw;
+  padding: 0;
+}
+
+.page-usedcars_name {
+  font-size: 24px;
+}
+
+.price {
+  font-size: 40px;
+}
+
+/* 下層ページ Used Cars詳細ページ */
+.usedcars-visual {
+  font-size: 104px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  height: 50vh;
+  margin-top: 80px;
+  background-image: url(/img/hv-usedcars.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.cars-ditail {
+  flex-direction: column;
+}
+
+.cars-ditail_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cars-mv p {
+  margin-top: 1rem;
+}
+
+.cars-ditail_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cars-ditail_item {
+  width: 36vw;
+  margin-top: 40px;
+}
+
+/* 下層ページ Contact */
+.contact-visual {
+  font-size: 104px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  height: 50vh;
+  margin-top: 80px;
+  background-image: url(/img/hv-contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.page-contact {
+  flex-direction: column;
+}
+
+.contact-tel {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.contact-tel a {
+  color: #f90;
+  font-size: 64px;
+}
+
+.form-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-table {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.contact-item,
+.contact-body {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.contact-item {
+  text-align: left;
+  width: 30%;
+  background-color: #eee;
+}
+
+.contact-body {
+  width: 70%;
+}
+
+.form-text {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.contact-submit {
+  width: 240px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  border-radius: 100vh;
+  border: 1px solid #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+/* Access */
+.access {
+  justify-content: space-between;
+}
+
+.company {
+  font-size: 20px;
+}
+
+.company-name {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.access-map {
+  width: 40vw;
+}
+.access-map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+.footer {
+  background-color: #f90;
+  width: 100%;
+}
+
+.footer-inner {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.footer-logo img {
+  width: auto;
+  height: 40px;
+}
+
+.footer-access {
+  margin: 16px auto 40px;
+}
+
+.copyright {
+  font-size: 8px;
+  text-align: center;
+}
+
+/** 960px以下表示設定 **/
+@media screen and (max-width: 960px) {
+  .grobal-navi {
+    display: none;
+  }
+  .humburger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.9;
+    transform: translateY(-100%);
+    transition: all 0.3s;
+  }
+  .menu-list {
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: absolute;
+    top: 32%;
+    text-align: center;
+  }
+  .menu-item {
+    width: 100%;
+    padding: 40px;
+    font-weight: bold;
+  }
+  .menu-item a {
+    font-size: 24px;
+  }
+  .hm-button {
+    position: fixed;
+    top: 5px;
+    right: 0;
+    z-index: 130;
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  .button-lineTop {
+    position: absolute;
+    top: 15px;
+    width: 40px;
+    height: 6px;
+    background-color: #ebebeb;
+    transition: all 0.3s;
+  }
+  .buttonIsOpen .button-lineTop {
+    transform: translateY(16.5px) rotate(45deg);
+  }
+  .button-lineMedium {
+    width: 40px;
+    height: 6px;
+    background-color: #ebebeb;
+    transition: all 0.3s;
+  }
+  .buttonIsOpen .button-lineMedium {
+    opacity: 0;
+  }
+  .button-lineBottom {
+    position: absolute;
+    bottom: 15px;
+    width: 40px;
+    height: 6px;
+    background-color: #ebebeb;
+    transition: all 0.3s;
+  }
+  .buttonIsOpen .button-lineBottom {
+    transform: translateY(-16.5px) rotate(-45deg);
+  }
+  .menuIsOpen {
+    transform: translateY(0);
+  }
+  .scroll-off {
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 961px) {
+  /** ハンバーガーメニュー **/
+  .hm-container {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
