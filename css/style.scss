@@ -4,12 +4,15 @@ $cWhite:#fff;
 $cBlack:#000;
 $cOrange:#f90;
 $cHover:#D9D9D9;
-$cMenuButton: #ebebeb;
+$cMenuButton: rgba($color: #000000, $alpha: 0.8);
 
 /* 共通 */
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   line-height: 1.5;
+}
+p {
+  text-align: justify;
 }
 a:hover {
   color: $cHover;
@@ -85,8 +88,7 @@ img {
   transition: background-color .5s;
 }
 .header.header-change {
-  background-color: $cWhite;
-  opacity: 0.8;
+  background-color: rgba($color: $cWhite, $alpha: 0.8);
 }
 .header-inner {
   display: flex;
@@ -133,6 +135,7 @@ img {
   left: 5%;
   bottom: 10%;
 }
+/* about */
 .about {
   justify-content: space-between;
   margin-left: 2rem;
@@ -208,14 +211,13 @@ img {
 }
 .process {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   }
 .process-block {
-  background-color: $cWhite;
-  width: 160px;
-  height: 240px;
-  transform: skewX(15deg);
+  border-left: 14vw solid #fff;
+  border-top: 10vw solid transparent;
+  border-bottom: 10vw solid transparent;
 }
 .process-item {
   position: relative;
@@ -223,7 +225,7 @@ img {
     display: block;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
   }
 }
@@ -494,41 +496,58 @@ img {
 
 /** 960px以下表示設定 **/
 @media screen and (max-width: 960px) {
-.grobal-navi {
-  display: none;
+  /* 共通 */
+  .section-box {
+    margin: 80px auto;
   }
-
-.humburger-menu {
+  .section-contents {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+  .text-title {
+    text-align: start;
+  }
+  /* header */
+  .header {
+    background-color: rgba($color: #000000, $alpha: 0);
+  }
+  .page-header {
+    background-color: rgba($color: $cOrange, $alpha: 1);
+  }
+  /* grobal-navi*/
+  .grobal-navi {
+    display: none;
+  }
+  /* ハンバーガーメニュー */
+  .humburger-menu {
     position: fixed;
     top: 0;
     right: 0;
     z-index: 20;
     height: 100vh;
-    background-color: $cBlack;
-    opacity: 0.9;
+    background-color: $cOrange;
+    opacity: 0.95;
     transform: translateY(-100%);
     transition: all 0.3s;
   }
-
   .menu-list {
-    width: 100%;
+    width: 100vw;
+    height: 100%;
     padding-left: 8px;
     padding-right: 8px;
-    position: absolute;
-    top: 32%;
     text-align: center;
+    display: grid;
+    align-content: center;
   }
-
   .menu-item {
     width: 100%;
     padding: 40px;
     font-weight: bold;
 
     a {
-      font-size: 24px;
+      font-size: 32px;
     }
   }
-
   .hm-button {
     position: fixed;
     top: 5px;
@@ -538,7 +557,6 @@ img {
     padding-left: 10px;
     padding-right: 20px;
   }
-
   .button-lineTop {
     position: absolute;
     top: 15px;
@@ -547,22 +565,18 @@ img {
     background-color: $cMenuButton;
     transition: all 0.3s;
   }
-
   .buttonIsOpen .button-lineTop {
     transform: translateY(16.5px) rotate(45deg);
   }
-
   .button-lineMedium {
     width: 40px;
     height: 6px;
     background-color: $cMenuButton;
     transition: all 0.3s;
   }
-
   .buttonIsOpen .button-lineMedium {
     opacity: 0;
   }
-
   .button-lineBottom {
     position: absolute;
     bottom: 15px;
@@ -571,20 +585,107 @@ img {
     background-color: $cMenuButton;
     transition: all 0.3s;
   }
-
   .buttonIsOpen .button-lineBottom {
     transform: translateY(-16.5px) rotate(-45deg);
   }
-
   .menuIsOpen {
     transform: translateY(0);
   }
-
   .scroll-off {
     overflow: hidden;
   }
+  /* main */
+  .main-visual {
+    height: 50vh;
+    background-position: center;
+    font-size: 64px;
+  }
+  .page-visual {
+    margin-top: 80px;
+    height: 30vh;
+    font-size: 50px;
+  }
 
+  /* service */
+  .contents-image {
+    margin-bottom: 1rem;
+  }
+  .contents-text {
+    p {
+      margin-bottom: 40px;
+    }
+  }
+  .about,.tuning,.maintenance,.trade {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* works */
+  .works-text {
+    p {
+      margin-bottom: 40px;
+    }
+  }
 
+  /* used cars */
+  .cars-list_item img {
+    width: 40vw;
+  }
+
+  /* 下層ページ */
+  //about
+  .page-about_title {
+    flex-direction: column;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+    }
+  .process {
+    flex-direction: column;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+  .process-item {
+    p {
+      top: 40%;
+      left: 50%;
+    }
+  }
+  .process-block {
+    border-top: 20vw solid $cWhite;
+    border-bottom: none;
+    border-left: 30vw solid transparent;
+    border-right: 30vw solid transparent;
+  }
+  //used cars
+  .page-usedcars {
+    margin-bottom: 0;
+  }
+  .page-usedcars_item img {
+    width: 100%;
+  }
+
+  //contact
+  .contact-tel {
+    font-size: 30px;
+    p {
+      text-align: center;
+    }
+    a {
+      font-size: 42px;
+    }
+  }
+  .access {
+    flex-direction: column-reverse;
+  }
+  .company {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .access-map {
+    width: 100%;
+    height: 300px;
+  }
 }
 
 @media screen and (min-width: 961px) {

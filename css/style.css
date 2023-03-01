@@ -5,6 +5,10 @@ body {
   line-height: 1.5;
 }
 
+p {
+  text-align: justify;
+}
+
 a:hover {
   color: #D9D9D9;
 }
@@ -88,8 +92,7 @@ img {
 }
 
 .header.header-change {
-  background-color: #fff;
-  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .header-inner {
@@ -142,6 +145,7 @@ img {
   bottom: 10%;
 }
 
+/* about */
 .about {
   justify-content: space-between;
   margin-left: 2rem;
@@ -225,15 +229,14 @@ img {
 
 .process {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
 }
 
 .process-block {
-  background-color: #fff;
-  width: 160px;
-  height: 240px;
-  transform: skewX(15deg);
+  border-left: 14vw solid #fff;
+  border-top: 10vw solid transparent;
+  border-bottom: 10vw solid transparent;
 }
 
 .process-item {
@@ -243,7 +246,7 @@ img {
   display: block;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
 
@@ -543,27 +546,48 @@ img {
 
 /** 960px以下表示設定 **/
 @media screen and (max-width: 960px) {
+  /* 共通 */
+  .section-box {
+    margin: 80px auto;
+  }
+  .section-contents {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+  .text-title {
+    text-align: start;
+  }
+  /* header */
+  .header {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .page-header {
+    background-color: #ff9900;
+  }
+  /* grobal-navi*/
   .grobal-navi {
     display: none;
   }
+  /* ハンバーガーメニュー */
   .humburger-menu {
     position: fixed;
     top: 0;
     right: 0;
     z-index: 20;
     height: 100vh;
-    background-color: #000;
-    opacity: 0.9;
+    background-color: #f90;
+    opacity: 0.95;
     transform: translateY(-100%);
     transition: all 0.3s;
   }
   .menu-list {
-    width: 100%;
+    width: 100vw;
+    height: 100%;
     padding-left: 8px;
     padding-right: 8px;
-    position: absolute;
-    top: 32%;
     text-align: center;
+    display: grid;
+    align-content: center;
   }
   .menu-item {
     width: 100%;
@@ -571,7 +595,7 @@ img {
     font-weight: bold;
   }
   .menu-item a {
-    font-size: 24px;
+    font-size: 32px;
   }
   .hm-button {
     position: fixed;
@@ -587,7 +611,7 @@ img {
     top: 15px;
     width: 40px;
     height: 6px;
-    background-color: #ebebeb;
+    background-color: rgba(0, 0, 0, 0.8);
     transition: all 0.3s;
   }
   .buttonIsOpen .button-lineTop {
@@ -596,7 +620,7 @@ img {
   .button-lineMedium {
     width: 40px;
     height: 6px;
-    background-color: #ebebeb;
+    background-color: rgba(0, 0, 0, 0.8);
     transition: all 0.3s;
   }
   .buttonIsOpen .button-lineMedium {
@@ -607,7 +631,7 @@ img {
     bottom: 15px;
     width: 40px;
     height: 6px;
-    background-color: #ebebeb;
+    background-color: rgba(0, 0, 0, 0.8);
     transition: all 0.3s;
   }
   .buttonIsOpen .button-lineBottom {
@@ -618,6 +642,85 @@ img {
   }
   .scroll-off {
     overflow: hidden;
+  }
+  /* main */
+  .main-visual {
+    height: 50vh;
+    background-position: center;
+    font-size: 64px;
+  }
+  .page-visual {
+    margin-top: 80px;
+    height: 30vh;
+    font-size: 50px;
+  }
+  /* service */
+  .contents-image {
+    margin-bottom: 1rem;
+  }
+  .contents-text p {
+    margin-bottom: 40px;
+  }
+  .about, .tuning, .maintenance, .trade {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* works */
+  .works-text p {
+    margin-bottom: 40px;
+  }
+  /* used cars */
+  .cars-list_item img {
+    width: 40vw;
+  }
+  /* 下層ページ */
+  .page-about_title {
+    flex-direction: column;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+  .process {
+    flex-direction: column;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+  .process-item p {
+    top: 40%;
+    left: 50%;
+  }
+  .process-block {
+    border-top: 20vw solid #fff;
+    border-bottom: none;
+    border-left: 30vw solid transparent;
+    border-right: 30vw solid transparent;
+  }
+  .page-usedcars {
+    margin-bottom: 0;
+  }
+  .page-usedcars_item img {
+    width: 100%;
+  }
+  .contact-tel {
+    font-size: 30px;
+  }
+  .contact-tel p {
+    text-align: center;
+  }
+  .contact-tel a {
+    font-size: 42px;
+  }
+  .access {
+    flex-direction: column-reverse;
+  }
+  .company {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .access-map {
+    width: 100%;
+    height: 300px;
   }
 }
 @media screen and (min-width: 961px) {
