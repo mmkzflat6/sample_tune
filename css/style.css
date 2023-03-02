@@ -139,6 +139,18 @@ img {
   position: relative;
 }
 
+.page-visual {
+  font-size: 88px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  height: 50vh;
+  margin-top: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .concept-title {
   position: absolute;
   left: 5%;
@@ -164,16 +176,7 @@ img {
 
 /* 下層ページ About */
 .about-visual {
-  font-size: 104px;
-  font-weight: bold;
-  color: #fff;
-  width: 100%;
-  height: 50vh;
-  margin-top: 80px;
   background-image: url(/img/hv-about.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
 }
 
 .about-box {
@@ -192,15 +195,18 @@ img {
   display: block;
 }
 
+.page-about_iv {
+  width: 100%;
+}
+
 .page-about_title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
 }
 .page-about_title h3 {
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -243,6 +249,7 @@ img {
   position: relative;
 }
 .process-item p {
+  text-align: center;
   display: block;
   position: absolute;
   top: 50%;
@@ -276,16 +283,7 @@ img {
 
 /* 下層ページ Works */
 .works-visual {
-  font-size: 104px;
-  font-weight: bold;
-  color: #fff;
-  width: 100%;
-  height: 50vh;
-  margin-top: 80px;
   background-image: url(/img/hv-works.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
 }
 
 .page-works {
@@ -324,16 +322,7 @@ img {
 
 /* 下層ページ Used Cars */
 .usedcars-visual {
-  font-size: 104px;
-  font-weight: bold;
-  color: #fff;
-  width: 100%;
-  height: 50vh;
-  margin-top: 80px;
   background-image: url(/img/hv-usedcars.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
 }
 
 .page-usedcars {
@@ -364,16 +353,7 @@ img {
 
 /* 下層ページ Used Cars詳細ページ */
 .usedcars-visual {
-  font-size: 104px;
-  font-weight: bold;
-  color: #fff;
-  width: 100%;
-  height: 50vh;
-  margin-top: 80px;
   background-image: url(/img/hv-usedcars.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
 }
 
 .cars-ditail {
@@ -382,9 +362,15 @@ img {
 
 .cars-ditail_title {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 1rem;
+}
+.cars-ditail_title .page-usedcars_name {
+  font-size: 32px;
+  font-weight: bold;
+}
+.cars-ditail_title p {
+  text-align: right;
 }
 
 .cars-mv p {
@@ -404,16 +390,7 @@ img {
 
 /* 下層ページ Contact */
 .contact-visual {
-  font-size: 104px;
-  font-weight: bold;
-  color: #fff;
-  width: 100%;
-  height: 50vh;
-  margin-top: 80px;
   background-image: url(/img/hv-contact.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
 }
 
 .page-contact {
@@ -425,6 +402,9 @@ img {
   font-weight: bold;
   text-align: center;
   margin-bottom: 80px;
+}
+.contact-tel p {
+  text-align: center;
 }
 .contact-tel a {
   color: #f90;
@@ -481,7 +461,7 @@ img {
 }
 
 .contact-submit {
-  width: 240px;
+  width: 160px;
   font-weight: bold;
   text-align: center;
   display: block;
@@ -561,10 +541,13 @@ img {
   .header {
     background-color: rgba(0, 0, 0, 0);
   }
+  .header-logo img {
+    height: 32px;
+  }
   .page-header {
     background-color: #ff9900;
   }
-  /* grobal-navi*/
+  /* grobal-navi */
   .grobal-navi {
     display: none;
   }
@@ -599,7 +582,7 @@ img {
   }
   .hm-button {
     position: fixed;
-    top: 5px;
+    top: 1px;
     right: 0;
     z-index: 130;
     height: 70px;
@@ -650,7 +633,7 @@ img {
     font-size: 64px;
   }
   .page-visual {
-    margin-top: 80px;
+    margin-top: 72px;
     height: 30vh;
     font-size: 50px;
   }
@@ -666,16 +649,28 @@ img {
     margin-right: auto;
   }
   /* works */
+  .page-works {
+    margin-bottom: 40px;
+  }
   .works-text p {
     margin-bottom: 40px;
   }
   /* used cars */
+  .cars-list {
+    margin-bottom: 40px;
+  }
   .cars-list_item img {
     width: 40vw;
   }
-  /* 下層ページ */
+  /* 下層ページ about */
+  .about-box .text-title {
+    font-size: 32px;
+  }
   .page-about_title {
     flex-direction: column;
+  }
+  .page-about_title h3 {
+    font-size: 32px;
   }
   .reverse {
     flex-direction: column-reverse;
@@ -695,12 +690,14 @@ img {
     border-left: 30vw solid transparent;
     border-right: 30vw solid transparent;
   }
+  /* 下層ページ used cars */
   .page-usedcars {
     margin-bottom: 0;
   }
   .page-usedcars_item img {
     width: 100%;
   }
+  /* 下層ページ contact */
   .contact-tel {
     font-size: 30px;
   }
@@ -723,9 +720,121 @@ img {
     height: 300px;
   }
 }
+/* 520px以下表示設定 */
+@media screen and (max-width: 520px) {
+  /* ハンバーガーメニュー */
+  .button-lineTop {
+    top: 20px;
+    width: 30px;
+    height: 5px;
+  }
+  .buttonIsOpen .button-lineTop {
+    transform: translateY(12px) rotate(45deg);
+  }
+  .button-lineMedium {
+    width: 30px;
+    height: 5px;
+  }
+  .button-lineBottom {
+    bottom: 20px;
+    width: 30px;
+    height: 5px;
+  }
+  .buttonIsOpen .button-lineBottom {
+    transform: translateY(-12px) rotate(-45deg);
+  }
+  /* 共通 */
+  .section-box {
+    margin: 40px auto;
+  }
+  .section-contents {
+    margin-bottom: 40px;
+  }
+  .section-title {
+    margin-bottom: 40px;
+  }
+  .main-visual {
+    height: 30vh;
+    background-position: center;
+    font-size: 40px;
+  }
+  .page-visual {
+    height: 16vh;
+    font-size: 32px;
+  }
+  /* about */
+  .page-about_title h3 {
+    font-size: 24px;
+  }
+  .page-about_text p {
+    margin-bottom: 0;
+  }
+  /* used-cars */
+  .cars-list {
+    margin-bottom: 0;
+  }
+  .page-usedcars_item {
+    margin-bottom: 40px;
+  }
+  .cars-list_item img {
+    width: 56vw;
+  }
+  .page-usedcars_item img {
+    width: 100%;
+  }
+  .price {
+    font-size: 30px;
+  }
+  /* cars-ditail */
+  .cars-ditail_title .page-usedcars_name {
+    font-size: 24px;
+  }
+  .cars-ditail_title p {
+    font-size: 8px;
+    text-align: right;
+  }
+  /* contact */
+  .contact-tel {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .contact-tel a {
+    font-size: 30px;
+  }
+  /* form */
+  .form-title {
+    font-size: 20px;
+  }
+  .contact-table .contact-item, .contact-table .contact-body {
+    display: block;
+    width: 100%;
+  }
+  /* access-map */
+  .company {
+    font-size: 10px;
+  }
+  .company-name {
+    font-size: 30px;
+  }
+  /* footer */
+  .footer-logo img {
+    width: auto;
+    height: 32px;
+  }
+}
+/* 961px以上のみの表示設定 */
 @media screen and (min-width: 961px) {
-  /** ハンバーガーメニュー **/
+  /* ハンバーガーメニュー */
   .hm-container {
     display: none;
+  }
+  .page-about_iv {
+    width: 60%;
+  }
+  .page-about_title {
+    grid-gap: 10vw;
+  }
+  .reverse {
+    justify-content: end;
   }
 }/*# sourceMappingURL=style.css.map */
