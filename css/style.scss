@@ -125,7 +125,7 @@ img {
   color: $cWhite;
   width: 100%;
   height: 100vh;
-  background-image: url(/img/main\ visual.jpg);
+  background-image: url(https://mmkzflat6.github.io/sample_tune/img/main-visual.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -163,7 +163,7 @@ img {
 
 /* 下層ページ About */
 .about-visual {
-  background-image: url(/img/hv-about.jpg);
+  background-image: url(https://mmkzflat6.github.io/sample_tune/img/hv-about.jpg);
 }
 .about-box {
   margin: 80px auto;
@@ -260,7 +260,7 @@ img {
 
 /* 下層ページ Works */
 .works-visual {
-  background-image: url(/img/hv-works.jpg);
+  background-image: url(https://mmkzflat6.github.io/sample_tune/img/hv-works.jpg);
 }
 .page-works {
   margin-bottom: 80px;
@@ -296,7 +296,7 @@ img {
 
 /* 下層ページ Used Cars */
 .usedcars-visual {
-  background-image: url(/img/hv-usedcars.jpg);
+  background-image: url(https://mmkzflat6.github.io/sample_tune/img/hv-usedcars.jpg);
 }
 .page-usedcars {
   margin-bottom: 0;
@@ -323,7 +323,7 @@ img {
 
 /* 下層ページ Used Cars詳細ページ */
 .usedcars-visual {
-  background-image: url(/img/hv-usedcars.jpg);
+  background-image: url(https://mmkzflat6.github.io/sample_tune/img/hv-usedcars.jpg);
 }
 .cars-ditail {
   flex-direction: column;
@@ -359,7 +359,7 @@ img {
 
 /* 下層ページ Contact */
 .contact-visual {
-  background-image: url(/img/hv-contact.jpg);
+  background-image: url(https://mmkzflat6.github.io/sample_tune/img/hv-contact.jpg);
 
 }
 .page-contact {
@@ -694,7 +694,7 @@ img {
     height: 5px;
   }
   .buttonIsOpen .button-lineTop {
-    transform: translateY(12px) rotate(45deg);
+    transform: translateY(12.5px) rotate(45deg);
   }
   .button-lineMedium {
     width: 30px;
@@ -706,7 +706,7 @@ img {
     height: 5px;
   }
   .buttonIsOpen .button-lineBottom {
-    transform: translateY(-12px) rotate(-45deg);
+    transform: translateY(-12.5px) rotate(-45deg);
   }
 
   /* 共通 */
