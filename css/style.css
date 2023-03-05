@@ -109,6 +109,7 @@ img {
   align-items: center;
 }
 .header-logo img {
+  width: auto;
   height: 40px;
 }
 
@@ -542,7 +543,6 @@ img {
     background-color: rgba(0, 0, 0, 0);
   }
   .header-logo img {
-    width: auto;
     height: 32px;
   }
   .page-header {
